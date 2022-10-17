@@ -2,6 +2,14 @@ import React from 'react';
 
 
 export const Login = () => {
+
+
+
+    const styleLogin = {
+        background: "linear-gradient( to right, #ee7724, #d8363a, #dd3675, #b44593)"
+    }
+
+
     return (
         <>
             <div className="text-center">
@@ -28,7 +36,7 @@ export const Login = () => {
                         className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                         id="exampleFormControlInput1"
                         placeholder="Password"
-                        />
+                    />
                 </div>
                 <div className="text-center pt-1 mb-12 pb-1">
                     <button
@@ -36,6 +44,7 @@ export const Login = () => {
                         type="button"
                         data-mdb-ripple="true"
                         data-mdb-ripple-color="light"
+                        style={styleLogin}
                     >
                     Log in
                     </button>

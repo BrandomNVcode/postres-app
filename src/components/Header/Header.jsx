@@ -3,6 +3,7 @@ import { Avatar, Badge } from '@mui/material';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import { motion } from "framer-motion";
 import { Modal } from '../Modal/Modal';
+import { Login } from '../Auth/Login';
 
 
 
@@ -57,7 +58,7 @@ export const Header = () => {
 
         <Modal isVisible={visible} setVisible={setVisible}>
           <>
-            <h1>HOLA MUNDO</h1>
+            <Login />
           </>
         </Modal>
     </div>

@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Avatar, Badge } from '@mui/material';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import { motion } from "framer-motion";
+import { Modal } from '../Modal/Modal';
 
 
 
 
 export const Header = () => {
+
+
+  const [visible, setVisible] = useState(false);
+
+
+  const handleAvatar = () => {
+    setVisible(!visible);
+  }
+
+
+
   return (
-    <div className='fixed z-50 w-screen p-6 px-16'>
+    <div className='fixed z-10 w-screen p-6 px-16'>
 
         {/* Desktop */}
         <div className='hidden md:flex w-full h-full justify-between'>
@@ -32,7 +44,7 @@ export const Header = () => {
                 </Badge>
               </motion.div>
               <motion.div whileTap={{scale: 0.8}} className='ml-10 mb-2 cursor-pointer'>
-                <Avatar alt="Remy Sharp" src="./img/avatar.png" />
+                <Avatar alt="Remy Sharp" src="./img/avatar.png" onClick={handleAvatar}/>
               </motion.div>
             </div>
         </div>
@@ -42,6 +54,12 @@ export const Header = () => {
 
         </div>
 
+
+        <Modal isVisible={visible} setVisible={setVisible}>
+          <>
+            <h1>HOLA MUNDO</h1>
+          </>
+        </Modal>
     </div>
   )
 }

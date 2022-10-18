@@ -4,6 +4,7 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import { motion } from "framer-motion";
 import { Modal } from '../Modal/Modal';
 import { Login } from '../Auth/Login';
+import { Register } from '../Auth/Register';
 
 
 
@@ -12,10 +13,12 @@ export const Header = () => {
 
 
   const [visible, setVisible] = useState(false);
+  const [viewAuth, setViewAuth] = useState(true);
 
 
   const handleAvatar = () => {
     setVisible(!visible);
+    setViewAuth(true);
   }
 
 
@@ -58,7 +61,12 @@ export const Header = () => {
 
         <Modal isVisible={visible} setVisible={setVisible}>
           <>
-            <Login />
+            {
+              viewAuth?
+              <Login viewAuth={viewAuth} setViewAuth={setViewAuth}/>
+              :
+              <Register viewAuth={viewAuth} setViewAuth={setViewAuth}/>
+            }
           </>
         </Modal>
     </div>

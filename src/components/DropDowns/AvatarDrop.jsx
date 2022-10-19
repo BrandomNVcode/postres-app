@@ -1,0 +1,45 @@
+import React, { useState } from 'react';
+
+
+
+export const AvatarDrop = ({children}) => {
+
+
+    const [visible, setVisible] = useState(false);
+
+
+    const handleButton = () => {
+        setVisible(!visible)
+    }
+
+
+    return (
+        <div class="relative inline-block text-left">
+            <div onClick={handleButton}>
+                {children}
+            </div>
+
+            {
+                visible
+                &&
+                <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div class="py-1" role="none">
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Edit</a>
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Duplicate</a>
+                    </div>
+                    <div class="py-1" role="none">
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Archive</a>
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Move</a>
+                    </div>
+                    <div class="py-1" role="none">
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Share</a>
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Add to favorites</a>
+                    </div>
+                    <div class="py-1" role="none">
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-6">Delete</a>
+                    </div>
+                </div>
+            }
+        </div>
+    )
+}

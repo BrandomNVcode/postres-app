@@ -36,6 +36,6 @@ export const Modal = ({children, isVisible=true, setVisible, w=500, h=700, estil
             </div>
             )}
         </>,
-        document.getElementById("custom-modal")!
+        document.getElementById("custom-modal")
     );
 }

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Modal } from '../Modal/Modal';
 import { Login } from '../Auth/Login';
 import { Register } from '../Auth/Register';
+import { AvatarDrop } from '../DropDowns/AvatarDrop';
 
 
 
@@ -16,7 +17,7 @@ export const Header = () => {
   const [viewAuth, setViewAuth] = useState(true);
 
 
-  const handleAvatar = () => {
+  const handleLogin = () => {
     setVisible(!visible);
     setViewAuth(true);
   }
@@ -47,9 +48,18 @@ export const Header = () => {
                   <StorefrontIcon />
                 </Badge>
               </motion.div>
+
               <motion.div whileTap={{scale: 0.8}} className='ml-10 mb-2 cursor-pointer'>
-                <Avatar alt="Remy Sharp" src="./img/avatar.png" onClick={handleAvatar}/>
+                <AvatarDrop>
+                  <Avatar alt="Remy Sharp" src="./img/avatar.png"/>
+                </AvatarDrop>
               </motion.div>
+
+              <button type="button"
+                      class="inline-block mb-2 ml-10 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+                      onClick={handleLogin}
+              >Login
+              </button>
             </div>
         </div>
 

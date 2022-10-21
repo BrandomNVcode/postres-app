@@ -24,7 +24,7 @@ export const Modal = ({children, isVisible=true, setVisible, w=500, h=700, estil
         <>
             {isVisible &&
             (
-            <div className='absolute left-0 top-0 w-full h-full flex justify-center items-center z-20' style={stylesModal}>
+            <div className='fixed left-0 top-0 w-full h-full flex justify-center items-center z-20' style={stylesModal}>
                 <div style={styles} className="flex justify-center items-center z-30">
                     <div>
                         {children}

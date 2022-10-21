@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './header.css';
+
 import { Avatar, Badge } from '@mui/material';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import { motion } from "framer-motion";
@@ -25,16 +27,16 @@ export const Header = () => {
 
 
   return (
-    <div className='fixed z-10 w-screen p-6 px-16'>
+    <div className='fixed z-10 w-screen p-6 px-5 sm:px-16 bg-primary'>
 
         {/* Desktop */}
-        <div className='hidden md:flex w-full h-full justify-between'>
+        <div className='flex w-full h-full justify-between'>
             <div className='flex items-center gap-2'>
                 <img src='./img/logo.png' className='w-10 object-cover' alt='logo'/>
-                <p className='text-headingColor text-xl font-bold'> City</p>
+                <p className='max-small text-headingColor text-xl font-bold'> City</p>
             </div>
 
-            <ul className='flex items-center gap-8'>
+            <ul className='max-small flex items-center gap-8'>
                 <li className='text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>Home</li>
                 <li className='text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>Menu</li>
                 <li className='text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>About Us</li>
@@ -56,17 +58,17 @@ export const Header = () => {
               </motion.div>
 
               <button type="button"
-                      class="inline-block mb-2 ml-10 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+                      className="inline-block mb-2 ml-10 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
                       onClick={handleLogin}
               >Login
               </button>
             </div>
         </div>
 
-        {/* Mobile */}
+        {/* Mobile
         <div className='md:hidden flex w-full'>
 
-        </div>
+        </div> */}
 
 
         <Modal isVisible={visible} setVisible={setVisible}>

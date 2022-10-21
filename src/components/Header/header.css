@@ -1,0 +1,8 @@
+
+
+@media (max-width: 640px) {
+    .max-small {
+        display: none !important;
+    }
+}
+

@@ -15,13 +15,12 @@ export const Register = ({viewAuth, setViewAuth}) => {
 
     return (
         <>
-            <div className="text-center">
+            <div className="text-center mb-12">
                   <img
                     className="mx-auto w-48"
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    src="./img/logo.png"
                     alt="logo"
                   />
-                  <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">We are The Lotus Team</h4>
             </div>
             <form>
                 <p className="mb-4">Please register to your account</p>
@@ -29,7 +28,7 @@ export const Register = ({viewAuth, setViewAuth}) => {
                     <input
                         type="text"
                         className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                        id="exampleFormControlInput1"
+                        id="username"
                         placeholder="Username"
                     />
                 </div>
@@ -37,7 +36,7 @@ export const Register = ({viewAuth, setViewAuth}) => {
                     <input
                         type='email'
                         className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                        id="exampleFormControlInput1"
+                        id="email"
                         placeholder="Email"
                     />
                 </div>
@@ -45,7 +44,7 @@ export const Register = ({viewAuth, setViewAuth}) => {
                     <input
                         type="password"
                         className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                        id="exampleFormControlInput1"
+                        id="password"
                         placeholder="Password"
                     />
                 </div>
@@ -53,7 +52,7 @@ export const Register = ({viewAuth, setViewAuth}) => {
                     <input
                         type="password"
                         className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                        id="exampleFormControlInput1"
+                        id="repeatpassword"
                         placeholder="Repeat Password"
                     />
                 </div>

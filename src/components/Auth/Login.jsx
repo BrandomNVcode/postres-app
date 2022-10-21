@@ -17,13 +17,13 @@ export const Login = ({viewAuth, setViewAuth}) => {
 
     return (
         <>
-            <div className="text-center">
+            <div className="text-center mb-12">
                   <img
                     className="mx-auto w-48"
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    src="./img/logo.png"
                     alt="logo"
                   />
-                  <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">We are The Lotus Team</h4>
+                  
             </div>
             <form>
                 <p className="mb-4">Please login to your account</p>

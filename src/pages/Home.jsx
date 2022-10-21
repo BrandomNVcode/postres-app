@@ -1,5 +1,6 @@
 import React from 'react'
 import { Filter } from '../components/Filter/Filter';
+import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import { Hero } from '../components/Hero/Hero';
 import { Slider } from '../components/Slider/Slider';
@@ -7,6 +8,7 @@ import { exampleProducts } from '../data/data';
 
 
 export const Home = () => {
+    
 
     return (
         <div className='w-screen h-auto flex flex-col bg-primary'>
@@ -31,6 +33,9 @@ export const Home = () => {
                 <Slider flag={false} data={exampleProducts}/>
 
             </main>
+
+            <Footer />
+  
         </div>
     )
 }

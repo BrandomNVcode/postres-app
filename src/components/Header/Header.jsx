@@ -27,13 +27,12 @@ export const Header = () => {
 
 
   return (
-    <div className='fixed z-10 w-screen p-6 px-5 sm:px-16 bg-primary'>
+    <div className='fixed z-10 w-screen p-2 px-5 sm:px-16 bg-primary border-b-2 border-slate-300'>
 
         {/* Desktop */}
         <div className='flex w-full h-full justify-between'>
             <div className='flex items-center gap-2'>
-                <img src='./img/logo.png' className='w-10 object-cover' alt='logo'/>
-                <p className='max-small text-headingColor text-xl font-bold'> City</p>
+                <img src='./img/logo.png' className='w-32 object-cover' alt='logo'/>
             </div>
 
             <ul className='max-small flex items-center gap-8'>

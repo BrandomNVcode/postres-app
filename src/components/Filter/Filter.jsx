@@ -11,7 +11,7 @@ export const Filter = () => {
 
 
     return (
-        <div className="w-full flex items-center justify-start lg:justify-center gap-8 py-6 overflow-x-scroll scrollbar-none">
+        <div className="w-full flex items-center justify-center flex-wrap gap-8 py-6">
             {
                 categories &&
                 categories.map((category) => (

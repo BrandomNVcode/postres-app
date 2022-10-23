@@ -67,7 +67,7 @@ export const Register = ({viewAuth, setViewAuth}) => {
                     Register
                     </button>
                 </div>
-                <div className="flex items-center justify-between pb-6">
+                <div className="flex items-center justify-center flex-wrap pb-6">
                     <p className="mb-0 mr-2">Have an account?</p>
                     <button
                         onClick={handleToLogin}

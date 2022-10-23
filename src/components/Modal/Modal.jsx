@@ -3,13 +3,11 @@ import { createPortal } from 'react-dom';
 
 
 
-export const Modal = ({children, isVisible=true, setVisible, w=500, h=700, estilos}) => {
+export const Modal = ({children, isVisible=true, setVisible, estilos}) => {
 
 
     const styles = {
         position: "relative",
-        width: `${w}px`,
-        height: `${h}px`,
         backgroundColor: '#fff',
         borderRadius: "1rem",
         ...estilos
@@ -25,11 +23,11 @@ export const Modal = ({children, isVisible=true, setVisible, w=500, h=700, estil
             {isVisible &&
             (
             <div className='fixed left-0 top-0 w-full h-full flex justify-center items-center z-20' style={stylesModal}>
-                <div style={styles} className="flex justify-center items-center z-30">
+                <div className="flex justify-center items-center z-30 w-340 md:w-508 h-3/4" style={styles}>
                     <div>
                         {children}
                     </div>
-                    <div className='absolute -top-5 -right-5'>
+                    <div className='absolute -top-4 -right-4'>
                         <button className='px-6 py-4 bg-red-900 rounded-full cursor-pointer text-center text-cyan-50' onClick={() => setVisible(false)}> X </button>
                     </div>
                 </div>

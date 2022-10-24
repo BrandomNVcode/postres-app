@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import { Home } from '../pages/Home';
+import { Postres } from '../pages/Postres';
 
 
 export const AppRouter = () => {
@@ -13,6 +14,7 @@ export const AppRouter = () => {
     <BrowserRouter>
         <Routes>
             <Route path='/' element={<Home />}/>
+            <Route path='/postres' element={<Postres />}/>
         </Routes>
     </BrowserRouter>
   )

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 
 
@@ -15,9 +16,9 @@ export const AvatarDrop = ({children}) => {
 
     return (
         <div className="relative inline-block text-left">
-            <div onClick={handleButton}>
+            <motion.div whileTap={{scale: 0.8}} onClick={handleButton}>
                 {children}
-            </div>
+            </motion.div>
 
             {
                 visible

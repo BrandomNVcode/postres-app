@@ -7,6 +7,7 @@ import {
 
 import { Home } from '../pages/Home';
 import { Postres } from '../pages/Postres';
+import { Store } from '../pages/Store';
 
 
 export const AppRouter = () => {
@@ -15,6 +16,7 @@ export const AppRouter = () => {
         <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='/postres' element={<Postres />}/>
+            <Route path='/store' element={<Store />}/>
         </Routes>
     </BrowserRouter>
   )

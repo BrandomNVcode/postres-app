@@ -3,11 +3,11 @@ import './header.css';
 
 import { Avatar, Badge } from '@mui/material';
 import StorefrontIcon from '@mui/icons-material/Storefront';
-import { motion } from "framer-motion";
 import { Modal } from '../Modal/Modal';
 import { Login } from '../Auth/Login';
 import { Register } from '../Auth/Register';
 import { AvatarDrop } from '../DropDowns/AvatarDrop';
+import { ShortStore } from '../DropDowns/ShortStore';
 
 
 
@@ -43,18 +43,19 @@ export const Header = () => {
             </ul>
 
             <div className='flex items-center justify-center ml-8'>
-              <motion.div whileTap={{scale: 0.8}}
-                          className='cursor-pointer'>
-                <Badge color="secondary" badgeContent={1}>
-                  <StorefrontIcon />
-                </Badge>
-              </motion.div>
+              <div>
+                <ShortStore>
+                  <Badge color="secondary" badgeContent={1}>
+                      <StorefrontIcon />
+                  </Badge>
+                </ShortStore>
+              </div>
 
-              <motion.div whileTap={{scale: 0.8}} className='ml-10 mb-2 cursor-pointer'>
+              <div className='ml-10 mb-2 cursor-pointer'>
                 <AvatarDrop>
                   <Avatar alt="Remy Sharp" src="./img/avatar.png"/>
                 </AvatarDrop>
-              </motion.div>
+              </div>
 
               <button type="button"
                       className="inline-block mb-2 ml-10 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"

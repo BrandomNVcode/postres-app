@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import './header.css';
 
 import { Avatar, Badge } from '@mui/material';
@@ -14,6 +16,10 @@ import { ShortStore } from '../DropDowns/ShortStore';
 
 export const Header = () => {
 
+
+  const { uid } = useSelector(state => state.user);
+
+  const navegacion = useNavigate();
 
   const [visible, setVisible] = useState(false);
   const [viewAuth, setViewAuth] = useState(true);
@@ -32,7 +38,7 @@ export const Header = () => {
         {/* Desktop */}
         <div className='flex w-full h-full justify-between'>
             <div className='flex items-center gap-2'>
-                <img src='./img/logo.png' className='w-32 object-cover' alt='logo'/>
+                <img src='./img/logo.png' className='w-32 object-cover cursor-pointer' alt='logo' onClick={() => navegacion('/')}/>
             </div>
 
             <ul className='max-small flex items-center gap-8'>
@@ -45,23 +51,30 @@ export const Header = () => {
             <div className='flex items-center justify-center ml-8'>
               <div>
                 <ShortStore>
-                  <Badge color="secondary" badgeContent={1}>
+                  <Badge color="secondary" badgeContent={0}>
                       <StorefrontIcon />
                   </Badge>
                 </ShortStore>
               </div>
 
-              <div className='ml-10 mb-2 cursor-pointer'>
-                <AvatarDrop>
-                  <Avatar alt="Remy Sharp" src="./img/avatar.png"/>
-                </AvatarDrop>
-              </div>
+              {
+                uid?
 
-              <button type="button"
-                      className="inline-block mb-2 ml-10 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                      onClick={handleLogin}
-              >Login
-              </button>
+                <div className='ml-10 mb-2 cursor-pointer'>
+                  <AvatarDrop>
+                    <Avatar alt="Remy Sharp" src="./img/avatar.png"/>
+                  </AvatarDrop>
+                </div>
+
+                :
+
+                <button type="button"
+                        className="inline-block mb-2 ml-10 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+                        onClick={handleLogin}
+                >Login
+                </button>
+              }
+
             </div>
         </div>
 
@@ -71,16 +84,23 @@ export const Header = () => {
         </div> */}
 
 
-        <Modal isVisible={visible} setVisible={setVisible}>
-          <>
-            {
-              viewAuth?
-              <Login viewAuth={viewAuth} setViewAuth={setViewAuth}/>
-              :
-              <Register viewAuth={viewAuth} setViewAuth={setViewAuth}/>
-            }
-          </>
-        </Modal>
+
+        {
+          !uid // mientras un usuario no este activo
+          && 
+          (
+            <Modal isVisible={visible} setVisible={setVisible}>
+              <>
+                {
+                  viewAuth?
+                  <Login viewAuth={viewAuth} setViewAuth={setViewAuth}/>
+                  :
+                  <Register viewAuth={viewAuth} setViewAuth={setViewAuth}/>
+                }
+              </>
+            </Modal>
+          )
+        }
     </div>
   )
 }

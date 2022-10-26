@@ -11,7 +11,7 @@ export const StoreShop = () => {
     }
 
     return (
-        <div className='flex justify-center items-center flex-col'>
+        <div className='flex justify-center items-center flex-col w-3/4'>
 
             <div className='mb-2' style={styleContentItem}>
                 <ItemShortStore />

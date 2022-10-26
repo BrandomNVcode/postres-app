@@ -5,7 +5,6 @@ import { createPortal } from 'react-dom';
 
 export const Modal = ({children, isVisible=true, setVisible, estilos}) => {
 
-
     const styles = {
         position: "relative",
         backgroundColor: '#fff',

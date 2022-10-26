@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-export const ItemShortStore = ({postre}) => {
+export const ItemShortStore = ({postre, drop = false}) => {
 
     const stylesImg = {
-        minWidth: '50px',
-        minHeight: '50px'
+        minWidth: '45px',
+        minHeight: '45px'
     }
 
     return (
@@ -14,15 +14,15 @@ export const ItemShortStore = ({postre}) => {
                 <img alt='postre' src='./img/i4.png' className='w-fit'/>
             </div>
             <div className='mr-4'>
-                <span className='text-sm md:text-xl lg:text-2xl text-cyan-700'>Nombre del postre</span>
+                <span className={`text-sm ${!drop && 'md:text-xl lg:text-2xl'} text-cyan-700`}>Nombre del postre</span>
             </div>
             <div className='mr-8 flex flex-row'>
-                <button className='mr-3 px-2 text-sm md:text-xl font-bold border text-yellow-200 border-slate-200 bg-slate-500 rounded-full'>-</button>
-                <span className='text-gray-500 text-sm md:text-xl'>2</span>
-                <button className='ml-3 px-2 text-sm md:text-xl font-bold border text-yellow-200 border-slate-200 bg-slate-500 rounded-full'>+</button>
+                <button className={`mr-3 px-2 text-sm ${!drop && 'md:text-xl'} font-bold border text-yellow-200 border-slate-200 bg-slate-500 rounded-full`}>-</button>
+                <span className={`text-gray-500 text-sm ${!drop && 'md:text-xl'}`}>2</span>
+                <button className={`ml-3 px-2 text-sm ${!drop && 'md:text-xl'} font-bold border text-yellow-200 border-slate-200 bg-slate-500 rounded-full`}>+</button>
             </div>
             <div>
-                <span className='font-bold text-sm md:text-xl text-gray-500'>$5.5</span>
+                <span className={`font-bold text-sm ${!drop && 'md:text-xl'} text-gray-500`}>$5.5</span>
             </div>
         </div>
     )

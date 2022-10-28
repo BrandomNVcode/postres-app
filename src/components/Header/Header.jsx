@@ -3,13 +3,10 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import './header.css';
 
-import { Avatar, Badge } from '@mui/material';
-import StorefrontIcon from '@mui/icons-material/Storefront';
-import { Modal } from '../Modal/Modal';
-import { Login } from '../Auth/Login';
-import { Register } from '../Auth/Register';
+import { Avatar } from '@mui/material';
 import { AvatarDrop } from '../DropDowns/AvatarDrop';
-import { ShortStore } from '../DropDowns/ShortStore';
+import { Auth } from '../Auth/Auth';
+import { LogicOrder } from '../StoreShop/LogicOrder';
 
 
 
@@ -49,22 +46,20 @@ export const Header = () => {
             </ul>
 
             <div className='flex items-center justify-center ml-8'>
-              <div>
-                <ShortStore>
-                  <Badge color="secondary" badgeContent={0}>
-                      <StorefrontIcon />
-                  </Badge>
-                </ShortStore>
-              </div>
 
               {
                 uid?
 
+                <>
+                <div>
+                  <LogicOrder />
+                </div>
                 <div className='ml-10 mb-2 cursor-pointer'>
                   <AvatarDrop>
                     <Avatar alt="Remy Sharp" src="./img/avatar.png"/>
                   </AvatarDrop>
                 </div>
+                </>
 
                 :
 
@@ -89,16 +84,7 @@ export const Header = () => {
           !uid // mientras un usuario no este activo
           && 
           (
-            <Modal isVisible={visible} setVisible={setVisible}>
-              <>
-                {
-                  viewAuth?
-                  <Login viewAuth={viewAuth} setViewAuth={setViewAuth}/>
-                  :
-                  <Register viewAuth={viewAuth} setViewAuth={setViewAuth}/>
-                }
-              </>
-            </Modal>
+            <Auth setViewAuth={setViewAuth} setVisible={setVisible} viewAuth={viewAuth} visible={visible}/>
           )
         }
     </div>

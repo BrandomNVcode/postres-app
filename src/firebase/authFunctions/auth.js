@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile  } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from '../config';
 
 
@@ -54,8 +54,16 @@ export const loginUser = async (email, password) => {
 }
 
 
+export const getCurrentAuthUser = (dispathFunction) => {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            dispathFunction(user);
+        }
+      });
+} 
 
-
-
+export const cerrarSesion = async() => {
+    await signOut(auth);
+}
 
 

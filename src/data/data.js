@@ -10,24 +10,24 @@ export const heroData = [
   },
   {
     id: 2,
-    name: "Strawberries",
-    decp: "Fresh Strawberries",
-    price: "10.25",
-    imageSrc: "./img/f1.png",
+    name: "Brownie",
+    decp: "Sweet and fluffy",
+    price: "6.00",
+    imageSrc: "./img/brownie.png",
   },
   {
     id: 3,
-    name: "Chicken Kebab",
-    decp: "Mixed Kebab Plate",
-    price: "8.25",
-    imageSrc: "./img/c3.png",
+    name: "Donuts",
+    decp: "Diversity of flavors",
+    price: "5.50",
+    imageSrc: "./img/donus.png",
   },
   {
     id: 4,
-    name: "Fish Kebab",
-    decp: "Mixed Fish Kebab",
-    price: "5.25",
-    imageSrc: "./img/fi1.png",
+    name: "Cakes",
+    decp: "Variety of cakes",
+    price: "20.00",
+    imageSrc: "./img/cakes.png",
   }
 ];
 
@@ -35,112 +35,117 @@ export const heroData = [
 export const exampleProducts = [
   {
     id: 1,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
+    imageURL: "./img/cakeoreo.png",
+    title: "Oreo Kake",
     calories: "64gr",
-    price: 5.25
+    price: 25.25,
+    categorieID: 1 
   },
   {
     id: 2,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
-    calories: "64gr",
-    price: 5.25
+    imageURL: "./img/icechocolate.png",
+    title: "Chocolate icecream",
+    calories: "32gr",
+    price: 14.50,
+    categorieID: 2
   },
   {
     id: 3,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
-    calories: "64gr",
-    price: 5.25
+    imageURL: "./img/browniechocolate.png",
+    title: "Chocolate Brownie",
+    calories: "16gr",
+    price: 4.50,
+    categorieID: 3
   },
   {
     id: 4,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
-    calories: "64gr",
-    price: 5.25
+    imageURL: "./img/donutsclassic.png",
+    title: "Classic Donus",
+    calories: "2gr",
+    price: 20.00,
+    categorieID: 3
   },
   {
     id: 5,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
-    calories: "64gr",
-    price: 5.25
+    imageURL: "./img/iceartesanal.png",
+    title: "Homemade Icecream",
+    calories: "2gr",
+    price: 12.75,
+    categorieID: 2
   },
   {
     id: 6,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
-    calories: "64gr",
-    price: 5.25
+    imageURL: "./img/galletacasera.png",
+    title: "Homemade Cookies",
+    calories: "4gr",
+    price: 8.00,
+    categorieID: 3
   },
   {
     id: 7,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
-    calories: "64gr",
-    price: 5.25
+    imageURL: "./img/icebanana.png",
+    title: "Banana Split",
+    calories: "2gr",
+    price: 10.25,
+    categorieID: 2
   },
   {
     id: 8,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
-    calories: "64gr",
-    price: 5.25
+    imageURL: "./img/cakecrem.png",
+    title: "Tres Leches",
+    calories: "6gr",
+    price: 28.00,
+    categorieID: 1
   },
   {
     id: 9,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
-    calories: "64gr",
-    price: 5.25
+    imageURL: "./img/icesundae.png",
+    title: "Sundae",
+    calories: "1gr",
+    price: 12.75,
+    categorieID: 2
   },
   {
     id: 10,
-    imageURL: "./img/fi1.png",
-    title: "Fish Kebab",
-    calories: "64gr",
-    price: 5.25
-  }
+    imageURL: "./img/cakehelado.png",
+    title: "Torta helada",
+    calories: "5gr",
+    price: 21.75,
+    categorieID: 1
+  },
+  {
+    id: 11,
+    imageURL: "./img/cakepie.png",
+    title: "Pie",
+    calories: "3gr",
+    price: 21.25,
+    categorieID: 1
+  },
+  {
+    id: 12,
+    imageURL: "./img/cakepiefra.png",
+    title: "Pie - Frambuesa",
+    calories: "3gr",
+    price: 23.25,
+    categorieID: 1
+  },
 ]
 
 
 export const categories = [
   {
     id: 1,
-    name: "Chicken",
-    urlParamName: "chicken",
+    name: "Kakes",
+    urlParamName: "kakes",
   },
   {
     id: 2,
-    name: "Curry",
-    urlParamName: "curry",
+    name: "Ice Creams",
+    urlParamName: "ice",
   },
   {
     id: 3,
-    name: "Rice",
-    urlParamName: "rice",
-  },
-  {
-    id: 4,
-    name: "Fish",
-    urlParamName: "fish",
-  },
-  {
-    id: 5,
-    name: "Fruits",
-    urlParamName: "fruits",
-  },
-  {
-    id: 6,
-    name: "Icecreams",
-    urlParamName: "icecreams",
-  },
-
-  {
-    id: 7,
-    name: "Soft Drinks",
-    urlParamName: "drinks",
+    name: "Others",
+    urlParamName: "others",
   },
 ];

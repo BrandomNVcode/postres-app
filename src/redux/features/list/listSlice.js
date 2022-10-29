@@ -11,7 +11,7 @@ export const listSlice = createSlice({
     initialState,
     reducers: {
         addOrdersSaves: (state, action) => {
-            state.orders = [...state.orders, ...action.payload]
+            state.orders = [...action.payload]
         },
         addOrder: (state, action) => {
             state.orders.push(action.payload);

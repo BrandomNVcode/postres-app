@@ -134,6 +134,11 @@ export const exampleProducts = [
 
 export const categories = [
   {
+    id: 0,
+    name: "All",
+    urlParamName: "all",
+  },
+  {
     id: 1,
     name: "Kakes",
     urlParamName: "kakes",

@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
     BrowserRouter ,
     Routes,
-    Route
+    Route,
+    Navigate
 } from "react-router-dom";
 import { getCurrentAuthUser } from '../firebase/authFunctions/auth';
 import { authUser } from '../redux/features/user/userSlice';
@@ -16,11 +17,11 @@ import { Store } from '../pages/Store';
 export const AppRouter = () => {
 
   const dispatch = useDispatch();
-
+  const { uid } = useSelector(state => state.user);
 
   
   useEffect(() => {
-    
+
     const dispathFunction = (user) => {
       dispatch(authUser({
         username: user.displayName,
@@ -30,19 +31,20 @@ export const AppRouter = () => {
     }
 
     getCurrentAuthUser(dispathFunction);
-    
 
   }, []);
   
 
 
   return (
-    <BrowserRouter>
-        <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/postres' element={<Postres />}/>
-            <Route path='/store' element={<Store />}/>
-        </Routes>
-    </BrowserRouter>
+    <>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Home />}/>
+                <Route path='/postres' element={<Postres />}/>
+                <Route path='/store' element={uid? <Store /> : <Navigate to='/'/>}/>
+            </Routes>
+        </BrowserRouter>
+    </>
   )
 }

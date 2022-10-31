@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import DeliveryDiningIcon from '@mui/icons-material/DeliveryDining';
+//import DeliveryDiningIcon from '@mui/icons-material/DeliveryDining';
 import { ItemShortStore } from './ItemShortStore';
+import { Paypal } from '../Pago/Paypal';
 
 
 
@@ -41,9 +42,9 @@ export const StoreShop = () => {
                     <span className='font-medium text-2xl text-gray-600'>${calcTotalPrice(orders)}</span>
                 </div>
 
-                <button className='mt-8 p-2 w-full max-w-3xl bg-gray-400 text-yellow-300 rounded-full'>
-                    <DeliveryDiningIcon className='ml-4'/> Pedir Ahora
-                </button>
+                <div className='mt-8 flex justify-center w-full'>
+                    <Paypal/>
+                </div>
             </div>
 
         </div>

@@ -12,6 +12,7 @@ import { authUser } from '../redux/features/user/userSlice';
 import { Home } from '../pages/Home';
 import { Postres } from '../pages/Postres';
 import { Store } from '../pages/Store';
+import { Paypal } from '../components/Pago/Paypal';
 
 
 export const AppRouter = () => {
